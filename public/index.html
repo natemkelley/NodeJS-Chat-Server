@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Node Chat Server</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <ul class="pages">
+        <li class="chatroom page">
+            <div class="form">
+                <h3 class="title">What chat room do you want?</h3>
+                <input class="btn btn-default btn-lg chatroombtn" type="button" id="chatroom1" value="Chat room 1" />
+                <input class="btn btn-default btn-lg chatroombtn" type="button" id="chatroom2" value="Chat room 2" />
+            </div>
+        </li>
+
+        <li class="login page">
+            <div class="form">
+                <h3 class="title">What's your chat name?</h3>
+                <input class="usernameInput" type="text" maxlength="14" />
+            </div>
+        </li>
+
+        <li class="chat page">
+            <div class="chatArea">
+                <ul class="messages"></ul>
+            </div>
+            <input class="inputMessage" placeholder="Type here..." />
+            <input class="adminpanel btn-default" type="button" value="Show current users" />
+        </li>
+    </ul>
+</body>
+
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/main.js"></script>
+
+</html>
